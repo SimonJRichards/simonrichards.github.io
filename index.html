@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simon Richards — Philosophy · Teaching & Writing</title>
+  <meta name="description" content="Private philosophy tutoring and selected writings. Ethics, metaphysics, truth and perception." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #FDFBF7;          /* paler cream background */
+      --ink: #1f1f1f;         /* text */
+      --ink-soft: #5a5a5a;    
+      --line: #e6e2d9;        /* rules */
+      --accent: #0f0f0f;      /* subtle link/hover */
+      --maxw: 760px;          /* reading width */
+      --hero-url: url('Museum.jpg'); /* replace with your image path; file in same folder */
+    }
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family: "EB Garamond", serif; font-size:20px; line-height:1.55;
+    }
+    header{
+      position:sticky; top:0; backdrop-filter:saturate(120%) blur(6px);
+      background:color-mix(in srgb, var(--bg) 90%, white 10%);
+      border-bottom:1px solid var(--line); z-index:10;
+    }
+    .nav{max-width:var(--maxw); margin:0 auto; display:flex; align-items:center; gap:1.5rem; justify-content:center; padding:14px 18px}
+    .nav a{font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-size:15px; letter-spacing:.02em; text-transform:uppercase; text-decoration:none; color:var(--ink-soft)}
+    .nav a:hover{color:var(--accent)}
+
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:48px 18px}
+    h1{font-size:42px; line-height:1.08; margin:.2em 0 .2em}
+    h2{font-size:28px; margin:2.2em 0 .6em; line-height:1.2}
+    h3{font-size:22px; margin:1.8em 0 .4em}
+    p{margin:0 0 1em}
+    .subtitle{font-family:"Inter", system-ui, sans-serif; font-size:16px; color:var(--ink-soft); letter-spacing:.08em; text-transform:uppercase}
+    .rule{height:1px; background:var(--line); margin:30px 0}
+
+    .lead{
+      font-size:22px; line-height:1.6; margin-top:.8em
+    }
+
+    .grid{display:grid; gap:22px}
+
+    @media(min-width:880px){
+      .two{grid-template-columns: 1.1fr .9fr}
+    }
+
+    .card{border:1px solid var(--line); border-radius:14px; padding:18px 18px 16px}
+    ul{padding-left:1.1em; margin:.2em 0 1em}
+    li{margin:.35em 0}
+
+    a{color:inherit}
+    a.underline{box-shadow: inset 0 -2px 0 0 color-mix(in srgb, var(--ink) 14%, transparent 86%); text-decoration:none}
+    a.underline:hover{box-shadow: inset 0 -2px 0 0 var(--ink)}
+
+    .mono{font-family:"Inter", system-ui, sans-serif; font-size:15px; color:var(--ink-soft)}
+
+    /* Hero image (fixed, monochrome, centered) */
+    .hero{
+  width:100%;
+  min-height:90vh; /* fuller building */
+  border-bottom:1px solid var(--line);
+  background-image: linear-gradient(rgba(0,0,0,.38), rgba(0,0,0,.38)), var(--hero-url);
+  background-size: cover;
+  background-position:center 30%;
+  background-repeat:no-repeat;
+  background-attachment:scroll; /* move as one with text */
+  filter: grayscale(100%) contrast(1.05) brightness(0.9);
+  display:flex;
+  align-items:flex-end; /* positions text lower */
+  justify-content:center;
+  text-align:center;
+}.hero{
+  width:100%;
+  min-height:90vh; /* fuller building */
+  border-bottom:1px solid var(--line);
+  background-image: linear-gradient(rgba(0,0,0,.38), rgba(0,0,0,.38)), var(--hero-url);
+  background-size: cover;
+  background-position:center 35%;
+  background-repeat:no-repeat;
+  background-attachment:scroll; /* move as one with text */
+  filter: grayscale(100%) contrast(1.05) brightness(0.9);
+  display:flex;
+  align-items:flex-end; /* positions text lower */
+  justify-content:center;
+  text-align:center;}
+	  
+  .hero .hero-inner {
+  padding: 0 18px 58px;  /* adjust this value to raise/lower the text */
+  width: 100%;
+}
+
+.hero .hero-inner h1 {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.45);
+  font-weight: 425;
+}
+
+.hero .hero-inner .subtitle {
+  font-family: "EB Garamond", serif;  /* match your name */
+  color: #fff;                        /* same tone */
+  text-shadow: 0 1px 3px rgba(0,0,0,.45);
+  letter-spacing: 0.01em;              /* subtle spacing, optional */
+  font-size: 1.02rem;                     /* adjust this value */
+}
+
+    /* Reflections list */
+    .post{padding:16px 0; border-top:1px solid var(--line)}
+    .post:first-child{border-top:0}
+    .post a{display:inline-block; text-decoration:none}
+    .post .meta{font-family:"Inter", system-ui, sans-serif; font-size:14px; color:var(--ink-soft)}
+
+    /* Footer */
+    footer{padding:28px 18px 60px; border-top:1px solid var(--line); margin-top:40px}
+    .foot{max-width:var(--maxw); margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#reflections">Reflections</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div id="top" class="hero" role="img" aria-label="Night facade with crest, evoking quiet metaphysical atmosphere">
+    <div class="hero-inner wrap">
+      <h1>Simon Richards</h1>
+      <div class="subtitle">Philosophy — Teaching and Writing</div>
+    </div>
+  </div>
+
+  <main class="wrap" id="content">
+    <section id="about">
+      <h2>About</h2>
+      <p>BA and MA in Philosophy; fourteen years' teaching experience across A Level and university contexts. My work engages the question of realism in relation to Greek ontology and Heidegger, with a particular interest in human nature and perception.</p>
+    </section>
+
+    <section id="teaching" class="grid two">
+      <div>
+        <h2>Teaching</h2>
+        <div class="card">
+          <h3>Private Tutorials</h3>
+          <ul>
+            <li>A Level &amp; university philosophy</li>
+            <li>Essay craft: structure, clarity, argument</li>
+            <li>Critical thinking &amp; interview preparation</li>
+            <li>Oxbridge applications &amp; adult learners welcome</li>
+          </ul>
+          <p class="mono">Rate: £50/hour · Free 30-minute consultation</p>
+          <p><a class="underline" href="#contact">Arrange a consultation →</a></p>
+        </div>
+      </div>
+      <div>
+        <h3>Approach</h3>
+        <p>I teach for clarity and independence: the aim is to think with precision, to write with economy, and to engage primary texts directly.</p>
+        <p class="mono">Lessons online or in London. Evenings and weekends available.</p>
+      </div>
+    </section>
+
+    <section id="reflections">
+      <h2>Reflections</h2>
+      <p>Essays. Continuing reflections on realism, perception, and human nature — part of a sustained philosophical project concerned with how thought encounters being. Selected published work will appear here when available.</p>
+   <ul>
+  <li><em>The Problem with the Problem of Illusion</em></li>
+  <li><em>Is Defining Human Nature a Way Out of Anti-Realism?</em></li>
+   <li><a href="virtue-epistemology.html"><em>Virtue Epistemology as an Alternative to Justified True Belief</em></a></li>
+</ul>
+
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>For tutoring or discussion, email me directly:</p>
+      <p><a class="underline" href="mailto:SimonRichards@riseup.net?subject=Philosophy%20Tutoring%20Enquiry">SimonRichards@riseup.net</a></p>
+    </section>
+
+    <footer>
+      <div class="foot">
+        <small class="mono">© <span id="y"></span> Simon Richards</small>
+        <small class="mono">No social media. Just the work.</small>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
