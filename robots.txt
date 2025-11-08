@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Prevent search engines from indexing source files and PDFs
+Disallow: /*.pdf$
+
+Sitemap: https://simonrichards.net/sitemap.xml
